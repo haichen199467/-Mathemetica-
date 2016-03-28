@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15534,        379]
-NotebookOptionsPosition[     15167,        361]
-NotebookOutlinePosition[     15521,        377]
-CellTagsIndexPosition[     15478,        374]
+NotebookDataLength[     17454,        417]
+NotebookOptionsPosition[     17087,        399]
+NotebookOutlinePosition[     17441,        415]
+CellTagsIndexPosition[     17398,        412]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -145,44 +145,30 @@ Cell[BoxData[{
          RowBox[{"Volt1", ",", "Volt2", ",", "Temp", ",", "Press"}], "}"}]}], 
        ",", 
        RowBox[{"PlotLabel", "\[Rule]", 
-        RowBox[{"\"\<\:5e73\:5747\:503c\:ff1aVolt1\:ff1d\>\"", "<>", 
-         RowBox[{"TextString", "[", 
-          RowBox[{"volt1", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
-         "\"\<\:ff1bVolt2=\>\"", "<>", 
-         RowBox[{"TextString", "[", 
-          RowBox[{"volt2", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
-         "\"\<\:ff1bTemp\:ff1d\>\"", "<>", 
-         RowBox[{"TextString", "[", 
-          RowBox[{"temp", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
-         "\"\<\:ff1bPress\:ff1d\>\"", "<>", 
-         RowBox[{"TextString", "[", 
-          RowBox[{"press", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
-         "\"\<\:ff1b\\n\:6700\:65b0\:6570\:636e\:ff1aVolt1\:ff1d\>\"", "<>", 
-         RowBox[{"TextString", "[", 
-          RowBox[{"volt1", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
-         "\"\<\:ff1bVolt2=\>\"", "<>", 
-         RowBox[{"TextString", "[", 
-          RowBox[{"volt2", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
-         "\"\<\:ff1bTemp\:ff1d\>\"", "<>", 
-         RowBox[{"TextString", "[", 
-          RowBox[{"temp", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
-         "\"\<\:ff1bPress\:ff1d\>\"", "<>", 
-         RowBox[{"TextString", "[", 
-          RowBox[{"press", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}]}]}]}], "\[IndentingNewLine]",
-       "\[IndentingNewLine]", 
+        RowBox[{"Framed", "[", 
+         RowBox[{"\"\<\:6700\:65b0\:6570\:636e\:ff1a\\nVolt1\:ff1d\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"volt1", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\:ff1bVolt2=\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"volt2", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\:ff1b\\nTemp\:ff1d\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"temp", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\:ff1bPress\:ff1d\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"press", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}]}], 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{
       "(*", "\"\<\:5e73\:5747\:503c\:ff1aVolt1\:ff1d\:ff1bVolt2=\:ff1bTemp\
 \:ff1d\:ff1bPress\:ff1d\:ff1b\\n\:6700\:65b0\:6570\:636e\:ff1aVolt1\:ff1d\
 \:ff1bVolt2=\:ff1bTemp\:ff1d\:ff1bPress\:ff1d\:ff1b\>\"", "*)"}], 
       "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ",", 
+     "\[IndentingNewLine]", 
      RowBox[{"DateListPlot", "[", 
       RowBox[{
        RowBox[{"{", 
@@ -209,8 +195,26 @@ Cell[BoxData[{
           RowBox[{"[", "2", "]"}], "]"}], ",", "d1"}], "}"}], ",", 
        RowBox[{"PlotLegends", "\[Rule]", 
         RowBox[{"{", 
-         RowBox[{"Volt1", ",", "Volt2", ",", "Temp", ",", "Press"}], 
-         "}"}]}]}], "]"}], ",", 
+         RowBox[{"Volt1", ",", "Volt2", ",", "Temp", ",", "Press"}], "}"}]}], 
+       ",", 
+       RowBox[{"PlotLabel", "\[Rule]", 
+        RowBox[{"Framed", "[", 
+         RowBox[{"\"\<\:6700\:65b0\:6570\:636e\:ff1a\\nVolt1\:ff1d\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"volt1", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\:ff1bVolt2=\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"volt2", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\:ff1b\\nTemp\:ff1d\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"temp", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\:ff1bPress\:ff1d\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"press", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}]}], "]"}], ",", 
      RowBox[{"DateListPlot", "[", 
       RowBox[{
        RowBox[{"{", 
@@ -237,8 +241,27 @@ Cell[BoxData[{
           RowBox[{"[", "3", "]"}], "]"}], ",", "d1"}], "}"}], ",", 
        RowBox[{"PlotLegends", "\[Rule]", 
         RowBox[{"{", 
-         RowBox[{"Volt1", ",", "Volt2", ",", "Temp", ",", "Press"}], 
-         "}"}]}]}], "]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+         RowBox[{"Volt1", ",", "Volt2", ",", "Temp", ",", "Press"}], "}"}]}], 
+       ",", 
+       RowBox[{"PlotLabel", "\[Rule]", 
+        RowBox[{"Framed", "[", 
+         RowBox[{"\"\<\:6700\:65b0\:6570\:636e\:ff1a\\nVolt1\:ff1d\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"volt1", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\:ff1bVolt2=\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"volt2", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\:ff1b\\nTemp\:ff1d\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"temp", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\<\:ff1bPress\:ff1d\>\"", "<>", 
+          RowBox[{"TextString", "[", 
+           RowBox[{"press", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}]}], "]"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"CloudExport", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{"{", 
@@ -253,7 +276,10 @@ Cell[BoxData[{
    "\[IndentingNewLine]", ",", "\"\<GIF\>\"", ",", "\"\<121270014\>\"", ",", 
    RowBox[{"\"\<DisplayDurations\>\"", "\[Rule]", 
     RowBox[{"{", 
-     RowBox[{"100", ",", "5", ",", "5"}], "}"}]}], ",", 
+     RowBox[{"5", ",", "5", ",", "5"}], "}"}]}], ",", 
+   RowBox[{"\"\<ImageSize\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Automatic", ",", "480"}], "}"}]}], ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]}], "Input",
  CellChangeTimes->{
   3.66781681228347*^9, {3.667817519453031*^9, 3.66781753114114*^9}, {
@@ -320,7 +346,14 @@ Cell[BoxData[{
    3.66808406002059*^9}, {3.668084216423677*^9, 3.668084240513098*^9}, {
    3.668084434288764*^9, 3.668084454862068*^9}, {3.6681606426269903`*^9, 
    3.668160675688734*^9}, {3.6681608356125603`*^9, 3.668160965268052*^9}, {
-   3.668161043965229*^9, 3.668161045961032*^9}, 3.668161094184901*^9}],
+   3.668161043965229*^9, 3.668161045961032*^9}, 3.668161094184901*^9, {
+   3.668165239979307*^9, 3.668165263936367*^9}, {3.668165343320032*^9, 
+   3.668165357742156*^9}, {3.668165405343473*^9, 3.6681654151735687`*^9}, {
+   3.668165512421928*^9, 3.6681655160332727`*^9}, {3.668166012463395*^9, 
+   3.6681661062172947`*^9}, {3.668166167145813*^9, 3.6681662153018103`*^9}, {
+   3.668166643963169*^9, 3.668166696784759*^9}, {3.6681667340411377`*^9, 
+   3.668166740137827*^9}, 3.668166794240396*^9, {3.668166829433174*^9, 
+   3.668166836766315*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -351,9 +384,14 @@ Cell[BoxData[
   "https://www.wolframcloud.com/objects/user-88a1f06b-0745-4284-8992-\
 63ef0d7fe428/121270014"],
   SelectWithContents->True]], "Output",
- CellChangeTimes->{3.668084073939168*^9, 3.6680842486273823`*^9, 
-  3.668084461890787*^9, 3.668160989674724*^9, 3.668161055258255*^9, 
-  3.6681611031902533`*^9}]
+ CellChangeTimes->{
+  3.668084073939168*^9, 3.6680842486273823`*^9, 3.668084461890787*^9, 
+   3.668160989674724*^9, 3.668161055258255*^9, 3.6681611031902533`*^9, 
+   3.668165212690072*^9, 3.668165365506263*^9, 3.668165423368294*^9, 
+   3.6681655243444033`*^9, 3.66816602447469*^9, {3.668166059053194*^9, 
+   3.6681661118148823`*^9}, 3.668166269527472*^9, {3.668166678402965*^9, 
+   3.668166704180855*^9}, 3.6681667470598307`*^9, 3.668166844958308*^9, 
+   3.668166901361114*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -377,10 +415,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 13229, 300, 656, "Input"],
-Cell[13812, 324, 1245, 31, 83, "Output"]
+Cell[580, 22, 14833, 333, 784, "Input"],
+Cell[15416, 357, 1561, 36, 83, "Output"]
 }, Open  ]],
-Cell[15072, 358, 91, 1, 28, "Input"]
+Cell[16992, 396, 91, 1, 28, "Input"]
 }
 ]
 *)
