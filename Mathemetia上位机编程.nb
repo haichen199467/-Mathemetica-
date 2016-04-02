@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17689,        432]
-NotebookOptionsPosition[     17315,        415]
-NotebookOutlinePosition[     17673,        431]
-CellTagsIndexPosition[     17630,        428]
+NotebookDataLength[     17998,        443]
+NotebookOptionsPosition[     17551,        423]
+NotebookOutlinePosition[     17909,        439]
+CellTagsIndexPosition[     17866,        436]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,6 +36,8 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{"DeviceClose", "[", "dev", "]"}]], "Input",
  CellChangeTimes->{{3.668497455245242*^9, 3.668497459928926*^9}}],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"program", "=", 
@@ -396,6 +398,11 @@ Cell[BoxData[
  NumberMarks->False],
 
 Cell[BoxData[
+ RowBox[{"{", "Null", "}"}]], "Output",
+ CellChangeTimes->{3.6685771745340986`*^9, 3.6685773384157324`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
  RowBox[{
   RowBox[{"RunScheduledTask", "[", 
    RowBox[{
@@ -411,7 +418,8 @@ Cell[BoxData[
    3.6685731470151587`*^9}, {3.668573181215164*^9, 3.6685731894305906`*^9}, {
    3.668573380351791*^9, 3.6685734233007693`*^9}, {3.668573480406887*^9, 
    3.668573503321865*^9}, {3.6685735393097725`*^9, 3.66857354695149*^9}, 
-   3.66857382143976*^9}]
+   3.66857382143976*^9, 3.6685771055113215`*^9, {3.6685771986324873`*^9, 
+   3.6685772010769405`*^9}}]
 },
 WindowSize->{1366, 685},
 WindowMargins->{{1358, Automatic}, {-4, Automatic}},
@@ -432,8 +440,11 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 500, 13, 48, "Input"],
 Cell[1061, 35, 132, 2, 48, "Input"],
-Cell[1196, 39, 15308, 356, 1096, "Input"],
-Cell[16507, 397, 804, 16, 48, "Input"]
+Cell[CellGroupData[{
+Cell[1218, 41, 15308, 356, 1096, "Input"],
+Cell[16529, 399, 121, 2, 31, "Output"]
+}, Open  ]],
+Cell[16665, 404, 882, 17, 48, "Input"]
 }
 ]
 *)
