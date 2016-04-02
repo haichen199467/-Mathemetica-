@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17998,        443]
-NotebookOptionsPosition[     17551,        423]
-NotebookOutlinePosition[     17909,        439]
-CellTagsIndexPosition[     17866,        436]
+NotebookDataLength[     21452,        529]
+NotebookOptionsPosition[     20807,        503]
+NotebookOutlinePosition[     21165,        519]
+CellTagsIndexPosition[     21122,        516]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -37,379 +37,368 @@ Cell[BoxData[
  RowBox[{"DeviceClose", "[", "dev", "]"}]], "Input",
  CellChangeTimes->{{3.668497455245242*^9, 3.668497459928926*^9}}],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"program", "=", 
-  RowBox[{"{", 
-   RowBox[{
-    RowBox[{"DeviceReadBuffer", "[", "dev", "]"}], ";", 
-    RowBox[{"DeviceReadBuffer", "[", "dev", "]"}], ";", 
-    RowBox[{"DeviceWrite", "[", 
-     RowBox[{"dev", ",", "\"\<1\>\""}], "]"}], ";", 
-    RowBox[{"Pause", "[", "10", "]"}], ";", 
-    RowBox[{"Day1data", "=", 
-     RowBox[{"FromCharacterCode", "[", 
-      RowBox[{"DeviceReadBuffer", "[", "dev", "]"}], "]"}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"volt1", "=", 
-     RowBox[{"Table", "[", 
-      RowBox[{"1", ",", "48"}], "]"}]}], ";", "\[IndentingNewLine]", 
-    RowBox[{"volt2", "=", 
-     RowBox[{"Table", "[", 
-      RowBox[{"1", ",", "48"}], "]"}]}], ";", "\[IndentingNewLine]", 
-    RowBox[{"temp", "=", 
-     RowBox[{"Table", "[", 
-      RowBox[{"1", ",", "48"}], "]"}]}], ";", "\[IndentingNewLine]", 
-    RowBox[{"press", "=", 
-     RowBox[{"Table", "[", 
-      RowBox[{"1", ",", "48"}], "]"}]}], ";", "\[IndentingNewLine]", 
-    RowBox[{"Do", "[", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"volt1", "[", 
-          RowBox[{"[", "n", "]"}], "]"}], "=", 
-         RowBox[{
-          RowBox[{"ToExpression", "[", 
-           RowBox[{
-            RowBox[{"StringSplit", "[", 
-             RowBox[{
-              RowBox[{
-               RowBox[{
-                RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                  RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                 RowBox[{"[", "n", "]"}], "]"}], "]"}], "[", 
-               RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-            RowBox[{"[", "1", "]"}], "]"}], "]"}], "/", "1000"}]}], ",", 
-        RowBox[{
-         RowBox[{"volt2", "[", 
-          RowBox[{"[", "n", "]"}], "]"}], "=", 
-         RowBox[{
-          RowBox[{"ToExpression", "[", 
-           RowBox[{
-            RowBox[{"StringSplit", "[", 
-             RowBox[{
-              RowBox[{
-               RowBox[{
-                RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                  RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                 RowBox[{"[", "n", "]"}], "]"}], "]"}], "[", 
-               RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-            RowBox[{"[", "2", "]"}], "]"}], "]"}], "/", "1000"}]}], ",", 
-        "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"temp", "[", 
-          RowBox[{"[", "n", "]"}], "]"}], "=", 
-         RowBox[{
-          RowBox[{"ToExpression", "[", 
-           RowBox[{
-            RowBox[{"StringSplit", "[", 
-             RowBox[{
-              RowBox[{
-               RowBox[{
-                RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                  RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                 RowBox[{"[", "n", "]"}], "]"}], "]"}], "[", 
-               RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-            RowBox[{"[", "3", "]"}], "]"}], "]"}], "/", "100"}]}], ",", 
-        "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"press", "[", 
-          RowBox[{"[", "n", "]"}], "]"}], "=", 
-         RowBox[{
-          RowBox[{"ToExpression", "[", 
-           RowBox[{
-            RowBox[{"StringSplit", "[", 
-             RowBox[{
-              RowBox[{
-               RowBox[{
-                RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                  RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                 RowBox[{"[", "n", "]"}], "]"}], "]"}], "[", 
-               RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-            RowBox[{"[", "4", "]"}], "]"}], "]"}], "/", "10000"}]}]}], 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"n", ",", "48"}], "}"}]}], "]"}], ";", "\[IndentingNewLine]", 
-    RowBox[{"now", "=", 
-     RowBox[{"DateObject", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", 
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "3", "]"}], "]"}], "]"}]}], "}"}], ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "4", "]"}], "]"}], "]"}], ",", 
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "5", "]"}], "]"}], "]"}], ",", 
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "6", "]"}], "]"}], "]"}]}], "}"}]}], "]"}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"aweekago", "=", 
-     RowBox[{"DateObject", "[", 
-      RowBox[{
-       RowBox[{"DayPlus", "[", 
-        RowBox[{"now", ",", 
-         RowBox[{"-", "100"}]}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "4", "]"}], "]"}], "]"}], ",", 
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "5", "]"}], "]"}], "]"}], ",", 
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "6", "]"}], "]"}], "]"}]}], "}"}]}], "]"}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"label", "=", 
-     RowBox[{"\"\<  Volt1=\>\"", "<>", 
-      RowBox[{"ToString", "[", 
-       RowBox[{"N", "[", 
-        RowBox[{
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "48", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "/", "1000"}], "]"}], "]"}],
-       "<>", "\"\<v   Volt2=\>\"", "<>", 
-      RowBox[{"ToString", "[", 
-       RowBox[{"N", "[", 
-        RowBox[{
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "48", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "]"}], "/", "1000"}], "]"}], "]"}],
-       "<>", "\[IndentingNewLine]", "\"\<v\\nTemp=\>\"", "<>", 
-      RowBox[{"ToString", "[", 
-       RowBox[{"N", "[", 
-        RowBox[{
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "48", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "3", "]"}], "]"}], "]"}], "/", "10"}], "]"}], "]"}], 
-      "<>", "\"\<'C      Press=\>\"", "<>", 
-      RowBox[{"ToString", "[", 
-       RowBox[{"N", "[", 
-        RowBox[{
-         RowBox[{"ToExpression", "[", 
-          RowBox[{
-           RowBox[{"StringSplit", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
-                 RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
-                RowBox[{"[", "48", "]"}], "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], "[", 
-           RowBox[{"[", "4", "]"}], "]"}], "]"}], "/", "1000"}], "]"}], "]"}],
-       "<>", "\"\<kPa\\n  \>\""}]}], ";", "\[IndentingNewLine]", 
-    RowBox[{"pic", "=", 
-     RowBox[{"DateListPlot", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"volt1", ",", "volt2", ",", "temp", ",", "press"}], "}"}], 
-       ",", 
-       RowBox[{"{", 
-        RowBox[{"now", ",", "aweekago"}], "}"}], ",", 
-       RowBox[{"PlotLegends", "\[Rule]", 
-        RowBox[{"{", 
-         RowBox[{"Volt1", ",", "Volt2", ",", "Temp", ",", "Press"}], "}"}]}], 
-       ",", 
-       RowBox[{"PlotLabel", "\[Rule]", "label"}]}], "]"}]}], ";"}], 
-   "}"}]}]], "Input",
- CellChangeTimes->{{3.668500822934557*^9, 3.6685008421009893`*^9}, 
-   3.6685009072205334`*^9, {3.6685009433975816`*^9, 3.668500960192201*^9}, {
-   3.668501005043109*^9, 3.668501049868286*^9}, {3.6685011109299603`*^9, 
-   3.66850118028548*^9}, {3.66856964760882*^9, 3.6685696620607386`*^9}, {
-   3.6685698461741257`*^9, 3.668569857701167*^9}, {3.6685700979137583`*^9, 
-   3.668570101969984*^9}, {3.668570378813328*^9, 3.668570392753927*^9}, {
-   3.6685704341216946`*^9, 3.6685704356259155`*^9}, {3.668570736295768*^9, 
-   3.6685707403269215`*^9}, {3.6685715374453535`*^9, 
-   3.6685715395051084`*^9}, {3.668571863272052*^9, 3.668571873228321*^9}, {
-   3.6685723811462903`*^9, 3.668572382320964*^9}, {3.668572645085653*^9, 
-   3.668572671813779*^9}, {3.668572745956689*^9, 3.6685727463777423`*^9}, {
-   3.6685728648755198`*^9, 3.668572912955724*^9}, 3.6685729518882537`*^9, {
-   3.668573038419402*^9, 3.668573045826638*^9}, {3.668573304101939*^9, 
-   3.6685733191225476`*^9}, {3.668573450744932*^9, 3.6685734619823136`*^9}, {
-   3.668573871669153*^9, 3.6685738992138214`*^9}, {3.6685740423488426`*^9, 
-   3.6685740441121893`*^9}, {3.6685742544492097`*^9, 
-   3.6685742557058973`*^9}, {3.66857478955133*^9, 3.6685747952166786`*^9}, {
-   3.6685749211869264`*^9, 3.668574924026931*^9}, {3.66857516050836*^9, 
-   3.6685751901535044`*^9}},
- NumberMarks->False],
-
-Cell[BoxData[
- RowBox[{"{", "Null", "}"}]], "Output",
- CellChangeTimes->{3.6685771745340986`*^9, 3.6685773384157324`*^9}]
-}, Open  ]],
-
 Cell[BoxData[
  RowBox[{
-  RowBox[{"RunScheduledTask", "[", 
+  RowBox[{
+  "RunScheduledTask", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"{", 
-     RowBox[{"program", ";", 
+     RowBox[{
+      RowBox[{"DeviceReadBuffer", "[", "dev", "]"}], ";", 
+      RowBox[{"DeviceReadBuffer", "[", "dev", "]"}], ";", 
+      RowBox[{"DeviceWrite", "[", 
+       RowBox[{"dev", ",", "\"\<1\>\""}], "]"}], ";", 
+      RowBox[{"Pause", "[", "10", "]"}], ";", 
+      RowBox[{"Day1data", "=", 
+       RowBox[{"FromCharacterCode", "[", 
+        RowBox[{"DeviceReadBuffer", "[", "dev", "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"volt1", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{"1", ",", "48"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"volt2", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{"1", ",", "48"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"temp", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{"1", ",", "48"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"press", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{"1", ",", "48"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Do", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"volt1", "[", 
+            RowBox[{"[", "n", "]"}], "]"}], "=", 
+           RowBox[{
+            RowBox[{"ToExpression", "[", 
+             RowBox[{
+              RowBox[{"StringSplit", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                    RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                   RowBox[{"[", "n", "]"}], "]"}], "]"}], "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+              "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "/", "1000"}]}], ",", 
+          RowBox[{
+           RowBox[{"volt2", "[", 
+            RowBox[{"[", "n", "]"}], "]"}], "=", 
+           RowBox[{
+            RowBox[{"ToExpression", "[", 
+             RowBox[{
+              RowBox[{"StringSplit", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                    RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                   RowBox[{"[", "n", "]"}], "]"}], "]"}], "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+              "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}], "/", "1000"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"temp", "[", 
+            RowBox[{"[", "n", "]"}], "]"}], "=", 
+           RowBox[{
+            RowBox[{"ToExpression", "[", 
+             RowBox[{
+              RowBox[{"StringSplit", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                    RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                   RowBox[{"[", "n", "]"}], "]"}], "]"}], "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+              "[", 
+              RowBox[{"[", "3", "]"}], "]"}], "]"}], "/", "100"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"press", "[", 
+            RowBox[{"[", "n", "]"}], "]"}], "=", 
+           RowBox[{
+            RowBox[{"ToExpression", "[", 
+             RowBox[{
+              RowBox[{"StringSplit", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                    RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                   RowBox[{"[", "n", "]"}], "]"}], "]"}], "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+              "[", 
+              RowBox[{"[", "4", "]"}], "]"}], "]"}], "/", "10000"}]}]}], 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", "48"}], "}"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"now", "=", 
+       RowBox[{"DateObject", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "]"}], ",", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "5", "]"}], "]"}], "]"}], ",", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "6", "]"}], "]"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"aweekago", "=", 
+       RowBox[{"DateObject", "[", 
+        RowBox[{
+         RowBox[{"DayPlus", "[", 
+          RowBox[{"now", ",", 
+           RowBox[{"-", "7"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "]"}], ",", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "5", "]"}], "]"}], "]"}], ",", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "49", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "6", "]"}], "]"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"label", "=", 
+       RowBox[{"\"\<  Volt1=\>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "48", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "/", "1000"}], "]"}], 
+         "]"}], "<>", "\"\<v   Volt2=\>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "48", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "]"}], "/", "1000"}], "]"}], 
+         "]"}], "<>", "\[IndentingNewLine]", "\"\<v\\nTemp=\>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "48", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "]"}], "/", "10"}], "]"}], "]"}],
+         "<>", "\"\<'C      Press=\>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Interpreter", "[", "List", "]"}], "[", 
+                   RowBox[{"ToString", "[", "Day1data", "]"}], "]"}], "[", 
+                  RowBox[{"[", "48", "]"}], "]"}], "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<,\>\""}], "]"}], 
+             "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "]"}], "/", "1000"}], "]"}], 
+         "]"}], "<>", "\"\<kPa\\n  \>\""}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"pic", "=", 
+       RowBox[{"DateListPlot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"volt1", ",", "volt2", ",", "temp", ",", "press"}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"aweekago", ",", "now"}], "}"}], ",", 
+         RowBox[{"PlotLegends", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"Volt1", ",", "Volt2", ",", "Temp", ",", "Press"}], 
+           "}"}]}], ",", 
+         RowBox[{"PlotLabel", "\[Rule]", "label"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"CloudDeploy", "[", 
-       RowBox[{"pic", ",", "\"\<121270014\>\"", ",", 
+       RowBox[{
+        RowBox[{"ExportForm", "[", 
+         RowBox[{"pic", ",", "\"\<GIF\>\""}], "]"}], ",", "\"\<121270014\>\"",
+         ",", 
         RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]}], 
      "}"}], ",", "60"}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.668571929677458*^9, 3.6685720126748977`*^9}, {
@@ -419,7 +408,98 @@ Cell[BoxData[
    3.668573380351791*^9, 3.6685734233007693`*^9}, {3.668573480406887*^9, 
    3.668573503321865*^9}, {3.6685735393097725`*^9, 3.66857354695149*^9}, 
    3.66857382143976*^9, 3.6685771055113215`*^9, {3.6685771986324873`*^9, 
-   3.6685772010769405`*^9}}]
+   3.6685772010769405`*^9}, {3.6685893176570663`*^9, 
+   3.6685893535622535`*^9}, {3.6685900121551075`*^9, 
+   3.6685900169522777`*^9}, {3.6685908084964685`*^9, 3.6685908427900248`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DateListPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"volt1", ",", "volt2", ",", "temp", ",", "press"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"aweekago", ",", "now"}], "}"}], ",", 
+   RowBox[{"PlotLegends", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Volt1", ",", "Volt2", ",", "Temp", ",", "Press"}], "}"}]}], ",", 
+   RowBox[{"PlotLabel", "\[Rule]", "label"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6685889349689827`*^9, 3.6685889359761314`*^9}, {
+   3.6685891557447567`*^9, 3.6685891579160485`*^9}, {3.668589232794425*^9, 
+   3.6685892640410757`*^9}, {3.6685894722059736`*^9, 3.6685894764200096`*^9}, 
+   3.6685902470178146`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"DateListPlot", "::", "dtvals"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Unable to automatically determine horizontal coordinates \
+for the given data and DataRange. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/DateListPlot\\\", ButtonNote -> \
+\\\"DateListPlot::dtvals\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6685911302840333`*^9, 3.668591171621375*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"DateListPlot", "::", "ldata"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({volt1, volt2, temp, press}\\)\[NoBreak] \
+is not a valid dataset or list of datasets. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/DateListPlot\\\", ButtonNote -> \
+\\\"DateListPlot::ldata\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6685911302840333`*^9, 3.6685911717729225`*^9}],
+
+Cell[BoxData[
+ RowBox[{"DateListPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"volt1", ",", "volt2", ",", "temp", ",", "press"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"aweekago", ",", "now"}], "}"}], ",", 
+   RowBox[{"PlotLegends", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Volt1", ",", "Volt2", ",", "Temp", ",", "Press"}], "}"}]}], ",", 
+   RowBox[{"PlotLabel", "\[Rule]", "label"}]}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.6685889366572504`*^9, 3.668588973052744*^9, {3.6685892369004574`*^9, 
+   3.668589264415721*^9}, 3.6685894773472223`*^9, {3.6685895335799656`*^9, 
+   3.668589589988391*^9}, {3.6685897785858154`*^9, 3.6685897918805475`*^9}, 
+   3.668589829024358*^9, 3.6685898909511304`*^9, {3.6685900360585117`*^9, 
+   3.6685900693222485`*^9}, 3.668590192577813*^9, {3.668590251551589*^9, 
+   3.6685902535238166`*^9}, 3.6685904328505683`*^9, 3.668591034223344*^9, 
+   3.6685911304466295`*^9, 3.6685911717749176`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["aweekago"], "Input",
+ CellChangeTimes->{{3.6685899003287916`*^9, 3.6685899262725954`*^9}, {
+  3.6685904604930544`*^9, 3.6685904648253984`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{RowBox[{"\"Thu 24 Dec 15 21:02:30\"", 
+     StyleBox[
+      RowBox[{"\"GMT+\"", "\[InvisibleSpace]", "8.`"}], FontColor -> 
+      GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+     RowBox[{
+       RowBox[{"{", 
+         RowBox[{"15", ",", "12", ",", "24"}], "}"}], ",", 
+       RowBox[{"TimeObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"21", ",", "2", ",", "30.`"}], "}"}], ",", 
+           RowBox[{"TimeZone", "\[Rule]", "8.`"}]}], "]"}], ",", 
+       RowBox[{"TimeZone", "\[Rule]", "8.`"}]}], "]"}]},
+  "DateObject",
+  Editable->False]], "Output",
+ CellChangeTimes->{3.668589903024433*^9, 3.6685899490078697`*^9, 
+  3.668590492824473*^9, 3.668591034382064*^9}]
+}, Open  ]]
 },
 WindowSize->{1366, 685},
 WindowMargins->{{1358, Automatic}, {-4, Automatic}},
@@ -440,11 +520,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 500, 13, 48, "Input"],
 Cell[1061, 35, 132, 2, 48, "Input"],
+Cell[1196, 39, 16012, 373, 1232, "Input"],
 Cell[CellGroupData[{
-Cell[1218, 41, 15308, 356, 1096, "Input"],
-Cell[16529, 399, 121, 2, 31, "Output"]
+Cell[17233, 416, 672, 14, 48, "Input"],
+Cell[17908, 432, 502, 10, 24, "Message"],
+Cell[18413, 444, 512, 10, 24, "Message"],
+Cell[18928, 456, 942, 18, 64, "Output"]
 }, Open  ]],
-Cell[16665, 404, 882, 17, 48, "Input"]
+Cell[CellGroupData[{
+Cell[19907, 479, 157, 2, 31, "Input"],
+Cell[20067, 483, 724, 17, 41, "Output"]
+}, Open  ]]
 }
 ]
 *)
